@@ -97,46 +97,17 @@ var l1 = new list();
 l1.concat('a')
 l1.cons('b')
 l1.concat('c')
-document.writeln("l1: " + l1.first() + "<BR>");
-document.writeln("l1: " + l1.length() + "<BR>");
+l1.concat('d')
+l1.concat('e')
+l1.concat('f')
 
-var l2 = new list();
-l2.cons('c')
-document.writeln("<BR>l2: " + l2.car() + "<BR>");
-document.writeln("l2: " + l2.length() + "<BR>");
 
-var l3 = new list();
-var l4 = new list();
-l3.cons('x')
-l3.cons('y')
-l3.cons('z')
-l4.cons(l3);
-l4.cons(l3.car());
-
-document.writeln("<BR>l3: " + l3.car());
-while(l3.length() > 0) {
-    document.writeln(", " + l3.cdr().car());
-}
-
-var h = l4.run('head');
-document.writeln("<BR>l4: " + h.data);
-for(var i = 1; i < l4.length(); i++) {
-    h = h.next;
-    document.writeln(", " + h.data);
-}
-
-l4.map(function(x){return x+x})
-var h = l4.run('head');
-document.writeln("<BR>l4: " + h.data);
-for(var i = 1; i < l4.length(); i++) {
-    h = h.next;
-    document.writeln(", " + h.data);
-}
-
-var poop = (function(){
-    var n = 0;
-    return function(){return n += 1;}
-})();
-
-document.writeln("<br>15:" + l1.iterate().data);
-document.writeln("<br>16:" + l1.iterate().data);
+document.writeln("The following lines contain strings of the data" +
+    "<br>" + " from the object given by the function reference." + "<br>" +
+"The list is ['a', 'b', 'c', 'd', 'e', 'f'].")
+document.writeln("<br>1:" + l1.iterate().data);
+document.writeln("<br>2:" + l1.iterate().data);
+document.writeln("<br>3:" + l1.iterate().data);
+document.writeln("<br>4:" + l1.iterate().data);
+document.writeln("<br>5:" + l1.iterate().data);
+document.writeln("<br>6:" + l1.iterate().data);
