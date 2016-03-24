@@ -80,10 +80,11 @@ var list = function() {
             return function(){
                 if(counter < 1){
                     counter += 1;
-                    return n;
+                    return n.data;
                 }else{
                     counter += 1;
-                    return n = n.next;
+                    n = n.next;
+                    return n.data;
                 }
             }
         })();
@@ -103,11 +104,11 @@ l1.concat('f')
 
 
 document.writeln("The following lines contain strings of the data" +
-    "<br>" + " from the object given by the function reference." + "<br>" +
+    "<br>" + " given by the function reference." + "<br>" +
 "The list is ['a', 'b', 'c', 'd', 'e', 'f'].")
-document.writeln("<br>1:" + l1.iterate().data);
-document.writeln("<br>2:" + l1.iterate().data);
-document.writeln("<br>3:" + l1.iterate().data);
-document.writeln("<br>4:" + l1.iterate().data);
-document.writeln("<br>5:" + l1.iterate().data);
-document.writeln("<br>6:" + l1.iterate().data);
+document.writeln("<br>1: " + l1.iterate());
+document.writeln("<br>2: " + l1.iterate());
+document.writeln("<br>3: " + l1.iterate());
+document.writeln("<br>4: " + l1.iterate());
+document.writeln("<br>5: " + l1.iterate());
+document.writeln("<br>6: " + l1.iterate());
